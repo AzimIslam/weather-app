@@ -1,0 +1,35 @@
+/* Sets the background of this component to a roof */
+div.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5em;
+}
+
+body {
+	background-image: url('./assets/homebackground.jpg');
+	background-size: cover;
+}
+
+.weatherText {
+	color: black;
+	font-weight: lighter;
+	letter-spacing: 5px;
+	margin-bottom: 0.5em;
+}
+
+.postcodeInput {
+	min-width: 200px;
+}
+
+.formGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+#OrText {
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
