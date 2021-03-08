@@ -8,14 +8,16 @@ import 'preact-material-components/Button/style.css';
 import 'preact-material-components/Theme/style.css';
 import styles from './style.css';
 
+
 // In-line CSS - adds space at the top of the button 
 const searchBtnCss = { marginTop: "8px" };
-
+const API_URL = "";
 // This method is responsible for requesting the GPS location to the user
 const requestGPS = () => {
 	if (navigator.geolocation) {
+		// TODO: Osman
 		navigator.geolocation.getCurrentPosition(() => {
-			console.log("Hello")
+			fetch(`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={}`);
 		});
 	}
 }
