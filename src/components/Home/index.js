@@ -1,4 +1,4 @@
-/* Imports MaterialUI framework and CSS files */
+/* Imports Material framework and CSS files */
 import Typography from 'preact-material-components/Typography';
 import TextField from 'preact-material-components/TextField';
 import Button from 'preact-material-components/Button';
@@ -11,18 +11,12 @@ import styles from './style.css';
 // In-line CSS - adds space at the top of the button 
 const searchBtnCss = { marginTop: "8px" };
 
-
-// This method is responsible 
+// This method is responsible for requesting the GPS location to the user
 const requestGPS = () => {
 	if (navigator.geolocation) {
-		prompt(navigator.geolocation.latitude);
-	} else {
-	navigator.geolocation.getCurrentPosition(function(location) {
-		console.log(location.coords.latitude);
-		console.log(location.coords.longitude);
-		console.log(location.coords.accuracy);
-		prompt(location.coords.latitude);
-	  });
+		navigator.geolocation.getCurrentPosition(() => {
+			console.log("Hello")
+		});
 	}
 }
 
