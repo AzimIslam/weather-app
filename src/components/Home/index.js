@@ -8,9 +8,11 @@ import 'preact-material-components/Button/style.css';
 import 'preact-material-components/Theme/style.css';
 import styles from './style.css';
 
+// In-line CSS - adds space at the top of the button 
 const searchBtnCss = { marginTop: "8px" };
 
 
+// This method is responsible 
 const requestGPS = () => {
 	if (navigator.geolocation) {
 		prompt(navigator.geolocation.latitude);
