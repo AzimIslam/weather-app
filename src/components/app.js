@@ -8,6 +8,7 @@ const App = () => (
 		
 		<Router>
 			<Home path="/"/>
+			<Weather path="/weather/:longtitude/:latitude" />
 		</Router>
 	</div>
 )
