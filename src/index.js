@@ -1,5 +1,5 @@
 import './style';
-import App from './components/app';
+import App from './routes/app';
 import 'preact/debug';
 
 

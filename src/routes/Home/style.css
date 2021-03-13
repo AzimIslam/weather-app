@@ -1,0 +1,47 @@
+/* The container holding the buttons, textboxes and text are aligned
+to the center and are also responsive */
+div.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5em;
+}
+
+/* Sets the background of this component to a roof */
+#homeBody {
+	background-image: url('./assets/homebackground.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+
+/* The 'WEATHER' text is made thin and black
+There is also spacing at the bottom of the word and
+spacing in between letters */
+.weatherText {
+	color: black;
+	font-weight: lighter;
+	letter-spacing: 5px;
+	margin-bottom: 0.5em;
+}
+
+/* The postcode textbox is cannot be smaller than 200px
+if the window size shrinks */
+.postcodeInput {
+	min-width: 200px;
+}
+
+/* This ensures that the form elements are display on top of each other
+instead of inline */ 
+.formGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+/* "OR" text is made white and adds spacing on top or the bottom of the text */
+#OrText {
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
