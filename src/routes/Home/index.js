@@ -12,11 +12,10 @@ import { route } from 'preact-router';
 
 // In-line CSS - adds space at the top of the button 
 const searchBtnCss = { marginTop: "8px" };
-const API_KEY = "b95e4f874db44d7934ee330883a8cf24";
+
 // This method is responsible for requesting the GPS location to the user
 const requestGPS = () => {
 	if (navigator.geolocation) {
-		// TODO: Osman
 		navigator.geolocation.getCurrentPosition(redirectViaGPS);
 	}
 }
