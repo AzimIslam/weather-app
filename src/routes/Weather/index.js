@@ -2,7 +2,8 @@
 import Typography from 'preact-material-components/Typography';
 import 'preact-material-components/Typography/style.css';
 import styles from './style.css';
-import {useState, componentDidMount} from 'preact/hooks';
+import {useState} from 'preact/hooks';
+import Header from '../../components/Header';
 
 
 const Weather = ({long, lat}) => {
@@ -10,6 +11,7 @@ const Weather = ({long, lat}) => {
     const [sunset, setSunset] = useState('');
     const [sunrise, setSunrise] = useState('');
     const [weather, setWeather] = useState('');
+    const [city, setCity] = useState('');
     const [temp, setTemp] = useState(0);
     const [windSpeed, setWindSpeed] = useState(0);
 
@@ -26,14 +28,18 @@ const Weather = ({long, lat}) => {
             setTemp(data['current']['temp']);
             setWindSpeed(data['current']['wind_speed']);
         });
-        
 
+    fetch(`https://api.postcodes.io/outcodes?lon=${long}&lat=${lat}`)
+        .then(response => response.json())
+        .then(data => {
+            fetch(`https://api.postcodes.io/postcodes?q=${data["result"][0]["outcode"]}`)
+                .then(response2 => response2.json())
+                .then(data2 => setCity(data2["result"][0]["region"]))
+        });
 
     return (
         <div>
-            <h1>Longtitude: {long}</h1>
-            <h1>Latitude: {lat}</h1>
-            <p>{sunset}, {sunrise}, {weather}, {temp}, {windSpeed}</p>
+            <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
         </div>
     );
 };

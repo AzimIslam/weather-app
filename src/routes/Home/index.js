@@ -22,10 +22,8 @@ const requestGPS = () => {
 
 // Extracts the coordinates from the geolocation API and redirects to /Weather
 const redirectViaGPS = (pos) => {
-	route(`/weather/${pos.coords.latitude}/${pos.coords.longitude}`);
+	route(`/weather/${pos.coords.longitude}/${pos.coords.latitude}`);
 }
-
-
 
 const Header = () => (
 	<div id={styles.homeBody}>
