@@ -3,5 +3,52 @@
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	padding: 5em;
+    padding: 3em;
+    background-color: LightBlue;
 }
+
+#weatherText {
+    font-weight: lighter;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: -14px;
+} 
+
+#cityText {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: -5px;
+}
+
+#date {
+    color: white;
+    opacity: 90%;
+}
+
+#temp {
+    color:white;
+    margin-top: 0.25em;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+
+#weather {
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-top: 2px dashed white;
+}
+
+#windSpeed, #sunset, #sunrise {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:white;
+}
+
+#sunset {
+    margin-top: -8px
+}
+

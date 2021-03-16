@@ -22,8 +22,8 @@ const Weather = ({long, lat}) => {
         .then(data => {
             var time1 = new Date(data['current']['sunset'] * 1000);
             var time2 = new Date(data['current']['sunrise'] * 1000);
-            setSunset(time1.getHours() + ":" + time1.getMinutes());
-            setSunrise(time2.getHours() + ":" + time2.getMinutes());
+            setSunset(time1.getHours() + ":" + String(time1.getMinutes()).padStart(2, "0"));
+            setSunrise(String(time2.getHours()).padStart(2, "0") + ":" + String(time2.getMinutes()).padStart(2, "0"));
             setWeather(data['current']['weather'][0]['main']);
             setTemp(data['current']['temp']);
             setWindSpeed(data['current']['wind_speed']);
