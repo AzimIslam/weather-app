@@ -3,7 +3,7 @@
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-    padding: 3em;
+    padding: 2em;
     background-color: LightBlue;
 }
 
@@ -52,3 +52,27 @@
     margin-top: -8px
 }
 
+#safety {
+    color: white;
+    font-weight: bolder;
+    margin-top: 10px
+}
+
+#poor {
+    color: red;
+}
+
+#moderate {
+    color: coral;
+}
+
+#good {
+    color: green;
+}
+
+#safetyAdvice {
+    font-weight: bolder;
+    font-size: 1em;
+    text-align: center;
+    line-height: 90%;
+}
