@@ -1,0 +1,36 @@
+.row {
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+    width: 90%;
+}
+
+.row * {
+    margin-left: 0.5em;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.day, .temp, .windSpeed {
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+
+.day {
+    width: 40%;
+    display: inline-block;
+}
+
+.temp {
+    display: inline-block;
+}
+
+.windSpeed {
+    float: right;
+}
