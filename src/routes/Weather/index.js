@@ -20,6 +20,11 @@ const Weather = ({long, lat}) => {
     const [windSpeed, setWindSpeed] = useState(0);
     const [weeklyData, setWeeklyData] = useState([]);
     const [hourlyData, setHourlyData] = useState([]);
+    const [isWeekly, setIsWeekly] = useState(true);
+
+    const toggleTable = () => {
+        setIsWeekly(!isWeekly)
+    }
 
     useEffect(() => {
         // Makes an API call to OpenWeather check browser console for response
@@ -33,8 +38,6 @@ const Weather = ({long, lat}) => {
             setWeather(data['current']['weather'][0]['main']);
             setTemp(data['current']['temp']);
             setWindSpeed(data['current']['wind_speed']);
-
-            console.log(data)
 
             // Formats weekly data
             let tempDays = []
@@ -79,12 +82,14 @@ const Weather = ({long, lat}) => {
         return;
     },[]);
 
-
     return (
         <div>
             <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
-            <WeeklyTable data={weeklyData}></WeeklyTable>
-            <TabBarPage />
+            
+            {
+                isWeekly ? <WeeklyTable data={weeklyData}></WeeklyTable> : <HourTable data={hourlyData}></HourTable>
+            }
+            <TabBarPage toggle={toggleTable} />
         </div>
     );
 };
