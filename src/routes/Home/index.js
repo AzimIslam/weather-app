@@ -36,7 +36,7 @@ const Header = () => {
 		fetch(`https://api.postcodes.io/postcodes/${postcode}`)
 			.then(response => response.json())
 			.then(data => route(`/weather/${data["result"]["longitude"]}/${data["result"]["latitude"]}`))
-
+			.catch(() => alert("Please enter a valid postcode"));
 		}
 	return(
 		<div id={styles.homeBody}>

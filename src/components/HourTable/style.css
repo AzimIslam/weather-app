@@ -1,0 +1,9 @@
+.row {
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+    width: 90%;
+}
+
+.row * {
+    margin-left: 0.5em;
+}

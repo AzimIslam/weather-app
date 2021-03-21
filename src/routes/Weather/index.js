@@ -8,6 +8,7 @@ import styles from './style.css';
 import {useState, useEffect} from 'preact/hooks';
 import Header from '../../components/Header';
 import WeeklyTable from '../../components/WeeklyTable';
+import HourTable from '../../components/HourTable';
 
 
 
@@ -20,6 +21,7 @@ const Weather = ({long, lat}) => {
     const [temp, setTemp] = useState(0);
     const [windSpeed, setWindSpeed] = useState(0);
     const [weeklyData, setWeeklyData] = useState([]);
+    const [hourlyData, setHourlyData] = useState([]);
 
     useEffect(() => {
         // Makes an API call to OpenWeather check browser console for response
@@ -34,9 +36,10 @@ const Weather = ({long, lat}) => {
             setTemp(data['current']['temp']);
             setWindSpeed(data['current']['wind_speed']);
 
-            // Formats weekly data
-            let tempArray = []
+            console.log(data)
 
+            // Formats weekly data
+            let tempDays = []
             
             for(let i = 1; i < 7; i++) {
                 let dayTemp = Math.round(data['daily'][i]["temp"]["max"]);
@@ -44,11 +47,27 @@ const Weather = ({long, lat}) => {
                 let daySunset = new Date(data['daily'][i]['sunset'] * 1000)
                 let daySunrise = new Date(data['daily'][i]['sunrise'] * 1000)
                 let dayWeather = data['daily'][i]['weather'][0]['main'];
-                tempArray.push([dayTemp, dayWindSpeed, daySunset, daySunrise, dayWeather]);
+                tempDays.push([dayTemp, dayWindSpeed, daySunset, daySunrise, dayWeather]);
             }
 
             // Sets the weeklyData state to the formatted weekly data
-            setWeeklyData(tempArray);
+            setWeeklyData(tempDays);
+
+            // Formats hourly data
+            let tempHours = []
+
+            for (let i = 0; i < 6; i++) {
+                let hourObj = new Date(data['hourly'][i]['dt'] * 1000);
+                let hour = hourObj.getHours() + ":00";
+                let hourCondition = data['hourly'][i]['weather'][0]['main']
+                let hourWindSpeed = Math.round(data['hourly'][i]['wind_speed'])
+                let hourTemp = Math.round(data['hourly'][i]['temp']);
+                tempHours.push([hour, hourCondition, hourWindSpeed, hourTemp]);
+            }
+
+            // Sets the hourlyData state to the formatted hourly data
+            setHourlyData(tempHours);
+
         });
 
         fetch(`https://api.postcodes.io/outcodes?lon=${long}&lat=${lat}`)
@@ -66,7 +85,8 @@ const Weather = ({long, lat}) => {
     return (
         <div>
             <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
-            <WeeklyTable data={weeklyData}></WeeklyTable>
+            {/* <WeeklyTable data={weeklyData}></WeeklyTable> */ }
+            <HourTable data={hourlyData}></HourTable>
         </div>
     );
 };
