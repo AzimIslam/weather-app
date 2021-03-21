@@ -27,6 +27,7 @@
     "sirv-cli": "1.0.3"
   },
   "dependencies": {
+    "@material/tab-bar": "^0.39.3",
     "dotenv": "^8.2.0",
     "fs": "^0.0.1-security",
     "geolocator": "^2.1.5",

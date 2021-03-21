@@ -1,14 +1,12 @@
 /* Imports Material framework and CSS files */
 import 'preact-material-components/TabBar/style.css';
 import 'preact-material-components/Typography/style.css';
-import {h, Component} from 'preact';
-import TabBar from 'preact-material-components/TabBar';
-import 'preact-material-components/TabBar/style.css';
-import styles from './style.css';
 import {useState, useEffect} from 'preact/hooks';
 import Header from '../../components/Header';
 import WeeklyTable from '../../components/WeeklyTable';
+
 import HourTable from '../../components/HourTable';
+import TabBarPage from '../../components/TabBarPage';
 
 
 
@@ -85,8 +83,8 @@ const Weather = ({long, lat}) => {
     return (
         <div>
             <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
-            {/* <WeeklyTable data={weeklyData}></WeeklyTable> */ }
-            <HourTable data={hourlyData}></HourTable>
+            <WeeklyTable data={weeklyData}></WeeklyTable>
+            <TabBarPage />
         </div>
     );
 };
