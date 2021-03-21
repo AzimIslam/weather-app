@@ -1,6 +1,6 @@
 .row {
     border-bottom: 1px solid #ccc;
-    padding: 1em;
+    padding: 0.8em;
     width: 90%;
 }
 
@@ -17,9 +17,10 @@
     margin-top: 0.5em;
 }
 
-.day, .temp, .windSpeed {
+.day, .temp {
     text-transform: uppercase;
     font-size: 10pt;
+    margin-top: 1em;
 }
 
 .day {
@@ -31,6 +32,6 @@
     display: inline-block;
 }
 
-.windSpeed {
+.icon {
     float: right;
 }
