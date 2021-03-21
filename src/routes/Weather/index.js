@@ -84,6 +84,7 @@ const Weather = ({long, lat}) => {
         <div>
             <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
             <WeeklyTable data={weeklyData}></WeeklyTable>
+            <TabBarPage />
         </div>
     );
 };
