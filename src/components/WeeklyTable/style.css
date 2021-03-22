@@ -41,11 +41,7 @@
 .icon {
     float: right;
     max-width: 30px;
-    max-height: 30px
-}
-
-.icon * {
-    float: right;
-    max-width: 30px;
     max-height: 30px;
+    vertical-align: middle;
+    margin-top: 10px;
 }

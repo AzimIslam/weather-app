@@ -4,6 +4,7 @@ import styles from './style.css';
 import { useState } from 'preact/hooks';
 import Icon from 'preact-material-components/Icon';
 import IconButton from 'preact-material-components/IconButton';
+import 'preact-material-components/IconButton/style.css';
 
 const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
     const [safety, setSafety] = useState("");
@@ -40,7 +41,12 @@ const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
                 <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
                 <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
-            <Typography id={styles.safetyAdvice} headline6>{safety == "Good" ? <span id={styles.good}><Icon class={styles.icon}>check_circle</Icon>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span> : safety == "Moderate" ? <span id={styles.moderate}><Icon class={styles.icon}>warning</Icon>TAKE CAUTION, MODERATE CHANCE OF INJURY</span>: <span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span>}</Typography>
+            <Typography id={styles.safetyAdvice} headline6> {
+                safety == "Good" ? <div><Icon class={styles.icon}>check_circle</Icon><span id={styles.good}>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span></div> : 
+                safety == "Moderate" ? <div style={{height: "30px"}}><Icon class={styles.icon}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div>: 
+                <div><Icon class={styles.icon}>error_outline</Icon><span id={styles.poor}>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span></div>
+            }
+            </Typography>
         </div>
     );
 }
