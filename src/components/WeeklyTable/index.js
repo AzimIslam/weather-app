@@ -15,7 +15,8 @@ const WeeklyTable = ({data}) => {
         
     }
     
-    return <div id={styles.container} scrollable={true}>
+    return <div id={styles.containerWrapper}>
+        <div id={styles.container}>
         {
             data.map((day, index) => {
                 return(
@@ -34,7 +35,7 @@ const WeeklyTable = ({data}) => {
                 );
             })
         }
-    </div>
+    </div></div>
 }
 
 export default WeeklyTable;

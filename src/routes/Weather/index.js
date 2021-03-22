@@ -22,8 +22,8 @@ const Weather = ({long, lat}) => {
     const [hourlyData, setHourlyData] = useState([]);
     const [isWeekly, setIsWeekly] = useState(true);
 
-    const toggleTable = () => {
-        setIsWeekly(!isWeekly)
+    const toggleTable = (bool) => {
+        setIsWeekly(bool)
     }
 
     useEffect(() => {
@@ -57,7 +57,7 @@ const Weather = ({long, lat}) => {
             // Formats hourly data
             let tempHours = []
 
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < 5; i++) {
                 let hourObj = new Date(data['hourly'][i]['dt'] * 1000);
                 let hour = hourObj.getHours() + ":00";
                 let hourCondition = data['hourly'][i]['weather'][0]['main']

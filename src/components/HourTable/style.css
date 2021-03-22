@@ -1,12 +1,12 @@
 .row {
     border-bottom: 1px solid #ccc;
-    padding: 1em;
-    width: 80%;
+    padding: 7px;
+    width: 90%;
 }
 
 .row * {
     margin-left: 1px;
-    font-size: 9pt;
+    font-size: 10pt;
 }
 
 .container {
@@ -16,6 +16,7 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 0.5em;
+    margin-bottom: 1px;
 }
 
 .headers * {
@@ -25,13 +26,13 @@
 }
 
 .headers {
-    width: 80%;
-    padding: 10px;
+    width: 90%;
+    padding: 5px;
     border-bottom: 1px solid #ccc;
 }
 
 .headersWrapper {
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;

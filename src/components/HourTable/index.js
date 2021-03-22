@@ -24,7 +24,7 @@ const HourTable = ({data}) => {
                         {
                             String(hour[1]) == "Sunny" ? <Icon className={styles.good}>check_circle</Icon>:
                             String(hour[1]) == "Rain" || String(hour[1]) == "Snow" || Number(hour[2]) >= 6 ? <Icon className={styles.poor}>error_outline</Icon>:
-                            <Icon className={styles.moderate}>warning</Icon>
+                            <Icon className={styles.moderate}>error_outline</Icon>
                         }
                         
                     </div>

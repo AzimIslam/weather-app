@@ -11,13 +11,13 @@ const TabBarPage = ({toggle}) => {
     const toggleWeekly = () => {
         setWeeklyCss({fontWeight: "bolder"});
         setHourlyCss({fontWeight: "normal"});
-        toggle();
+        toggle(true);
     }
 
     const toggleHourly = () => {
         setWeeklyCss({fontWeight: "normal"});
         setHourlyCss({fontWeight: "bolder"});
-        toggle();
+        toggle(false);
     }
 
     return(
