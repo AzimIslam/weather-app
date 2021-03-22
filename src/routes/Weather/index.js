@@ -7,6 +7,7 @@ import WeeklyTable from '../../components/WeeklyTable';
 
 import HourTable from '../../components/HourTable';
 import TabBarPage from '../../components/TabBarPage';
+import { route } from 'preact-router';
 
 
 
@@ -25,7 +26,7 @@ const Weather = ({long, lat}) => {
     const toggleTable = (bool) => {
         setIsWeekly(bool)
     }
-
+    
     useEffect(() => {
         // Makes an API call to OpenWeather check browser console for response
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`)
@@ -84,7 +85,7 @@ const Weather = ({long, lat}) => {
 
     return (
         <div>
-            <Header temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
+            <Header setSunrise={setSunrise} setSunset={setSunset} setWeather={setWeather} setCity={setCity} setTemp={setTemp} setWindSpeed={setWindSpeed} setHourlyData={setHourlyData} setWeeklyData={setWeeklyData} temp={temp} sunset={sunset} sunrise={sunrise} windSpeed={windSpeed} weather={weather} city={city}/>
             
             {
                 isWeekly ? <WeeklyTable data={weeklyData}></WeeklyTable> : <HourTable data={hourlyData}></HourTable>

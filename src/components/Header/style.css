@@ -8,8 +8,27 @@
     color: white;
     margin: 10px;
 }
-#header {
-    background-color: LightBlue;
+#rain {
+    background-image: url('./assets/rain.jpg');
+    padding: 10px;
+}
+
+#cloudy {
+    background-image: url('./assets/cloudy.jpg');
+    padding: 10px;
+}
+#snow {
+    background-image: url('./assets/snow.jpg');
+    padding: 10px;
+}
+
+#sunny {
+    background-image: url('./assets/sunny.jpg');
+    padding: 10px;
+}
+
+#thunder {
+    background-image: url('./assets/thunder.jpg');
     padding: 10px;
 }
 
