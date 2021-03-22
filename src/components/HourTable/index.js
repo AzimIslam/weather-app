@@ -22,8 +22,8 @@ const HourTable = ({data}) => {
                         <Typography class={styles.windSpeed} body1>{String(hour[2])} MPH</Typography>
                         <Typography class={styles.temp} body1>{String(hour[3])}&deg;</Typography>
                         {
-                            String(hour[1]) == "Sunny" ? <Icon className={styles.good}>check_circle</Icon>:
-                            String(hour[1]) == "Rain" || String(hour[1]) == "Snow" || Number(hour[2]) >= 6 ? <Icon className={styles.poor}>error_outline</Icon>:
+                            String(hour[1]) == "Sunny" || String(hour[1]) == "Clear" ? <Icon className={styles.good}>check_circle</Icon>:
+                            String(hour[1]) == "Rain" || String(hour[1]) == "Snow" || Number(hour[2]) >= 6 ? <Icon className={styles.poor}>warning</Icon>:
                             <Icon className={styles.moderate}>error_outline</Icon>
                         }
                         

@@ -15,8 +15,8 @@ const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
     if (dateObj.getDay()-1 == -1) currentDate = "Sunday" + " " + dateObj.getDate() + " " + month + " " + dateObj.getFullYear();
     else currentDate = days[dateObj.getDay()-1] + " " + dateObj.getDate() + " " + month + " " + dateObj.getFullYear();
 
-    if (weather == "Sunny") setSafety("Good");
-    else if (weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6) setSafety("Poor");
+    if (weather == "Sunny" || weather == "Clear") setSafety("Good");
+    else if (weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ) setSafety("Poor");
     else setSafety("Moderate");
 
     return (
@@ -39,7 +39,7 @@ const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
                 <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
                 <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
                 <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
-                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
+                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
             <Typography id={styles.safetyAdvice} headline6> {
                 safety == "Good" ? <div><Icon class={styles.icon}>check_circle</Icon><span id={styles.good}>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span></div> : 

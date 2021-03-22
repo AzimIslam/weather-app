@@ -1,6 +1,6 @@
 .row {
     border-bottom: 1px solid #ccc;
-    padding: 7px;
+    padding: 10px;
     width: 90%;
 }
 
@@ -53,4 +53,8 @@
 
 .poor {
     color: red
+}
+
+.good, .moderate, .poor {
+    vertical-align: middle;
 }
