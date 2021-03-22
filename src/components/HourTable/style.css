@@ -5,20 +5,9 @@
 }
 
 .row * {
-    margin-left: 0.2em;
+    margin-left: 1px;
+    font-size: 9pt;
 }
-
-
-@media screen and (max-width: 500px) {
-    .row * {
-        font-size: 9pt;
-        margin-left: 0;
-
-    }
-    .row {
-        padding: 5px;
-    }
-  }
 
 .container {
     display: flex;
@@ -30,7 +19,6 @@
 }
 
 .headers * {
-    margin-left: 0.5em;
     width: 15%;
     display: inline-block;
     text-align: center;

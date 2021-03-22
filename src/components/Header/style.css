@@ -10,6 +10,7 @@
 }
 #header {
     background-color: LightBlue;
+    padding: 10px;
 }
 
 #headerInfo {
@@ -17,25 +18,24 @@
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-    padding: 2em;
-    
 }
 
 #weatherText {
     font-weight: lighter;
     color: white;
-    font-size: 3rem;
+    font-size: 30pt;
     margin-bottom: -14px;
 } 
 
 #cityText {
-    font-size: 1.75rem;
+    font-size: 20pt;
     color: white;
     margin-bottom: -5px;
 }
 
 #date {
     color: white;
+    font-size: 12pt;
     opacity: 90%;
 }
 
@@ -43,6 +43,7 @@
     color:white;
     margin-top: 0.25em;
     font-weight: bolder;
+    font-size: 48pt;
     padding-bottom: 5px;
 }
 
@@ -56,7 +57,7 @@
 }
 
 #windSpeed, #sunset, #sunrise {
-    font-size: 1rem;
+    font-size: 12pt;
     text-transform: uppercase;
     font-weight: bold;
     color:white;
@@ -69,26 +70,33 @@
 #safety {
     color: white;
     font-weight: bolder;
-    margin-top: 10px
+    margin-top: 10px;
+    font-size: 14pt;
+    text-align: center;
+    width: 100%;
+    display: inline;
 }
 
-#poor {
+#poor, #poorScore {
     color: red;
 }
 
-#moderate {
+#moderate, #moderateScore {
     color: coral;
 }
 
-#good {
+#good, #goodScore {
     color: green;
 }
 
+#poor, #moderate, #good {
+    font-size: 150%;
+}
 #safetyAdvice {
+    font-size: 8pt;
+    width: 100%;
     font-weight: bolder;
     text-align: center;
-    /*line-height: 90%;*/
-    height: 100%;
 }
 
 .icon {

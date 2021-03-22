@@ -38,9 +38,9 @@ const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
                 <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
                 <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
                 <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
-                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.good}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poor}>POOR</span>: <span id={styles.moderate}>MODERATE</span>}</Typography>
-                <Typography id={styles.safetyAdvice} headline6>{safety == "Good" ? <span id={styles.good}><Icon class={styles.icon}>check_circle</Icon>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span> : safety == "Moderate" ? <div><span id={styles.moderate}><Icon class={styles.icon}>warning</Icon>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div> : <span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span>}</Typography>
+                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
+            <Typography id={styles.safetyAdvice} headline6>{safety == "Good" ? <span id={styles.good}><Icon class={styles.icon}>check_circle</Icon>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span> : safety == "Moderate" ? <span id={styles.moderate}><Icon class={styles.icon}>warning</Icon>TAKE CAUTION, MODERATE CHANCE OF INJURY</span>: <span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span>}</Typography>
         </div>
     );
 }
