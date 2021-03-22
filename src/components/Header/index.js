@@ -3,6 +3,7 @@ import 'preact-material-components/Typography/style.css';
 import styles from './style.css';
 import { useState } from 'preact/hooks';
 import Icon from 'preact-material-components/Icon';
+import IconButton from 'preact-material-components/IconButton';
 
 const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
     const [safety, setSafety] = useState("");
@@ -18,17 +19,28 @@ const header = ({city, temp, weather, windSpeed, sunset, sunrise}) => {
     else setSafety("Moderate");
 
     return (
-        <div id={styles.header}> 
-            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-            <Typography headline2 id={styles.weatherText}>WEATHER</Typography><Typography headline3 id={styles.cityText}>{city}</Typography>
-            <Typography id={styles.date}>{currentDate}</Typography>
-            <Typography headline2 id={styles.temp}>{Math.round(temp)}&deg;</Typography>
-            <Typography headline4 id={styles.weather}>{weather}</Typography>
-            <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
-            <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
-            <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
-            <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.good}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poor}>POOR</span>: <span id={styles.moderate}>MODERATE</span>}</Typography>
-            <Typography id={styles.safetyAdvice} headline6>{safety == "Good" ? <span id={styles.good}>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span> : safety == "Moderate" ? <div><Icon class={styles.icon}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div> : <span id={styles.poor}>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span>}</Typography>
+        <div id={styles.header}>
+            <div> 
+                <IconButton id={styles.search}>
+                    <IconButton.Icon>search</IconButton.Icon>
+                    <IconButton.Icon on >search</IconButton.Icon>
+                </IconButton>
+                <IconButton id={styles.location}>
+                    <IconButton.Icon>location_on</IconButton.Icon>
+                    <IconButton.Icon on >location_on</IconButton.Icon>
+                </IconButton>
+            </div>
+            <div id={styles.headerInfo}>
+                <Typography headline2 id={styles.weatherText}>WEATHER</Typography><Typography headline3 id={styles.cityText}>{city}</Typography>
+                <Typography id={styles.date}>{currentDate}</Typography>
+                <Typography headline2 id={styles.temp}>{Math.round(temp)}&deg;</Typography>
+                <Typography headline4 id={styles.weather}>{weather}</Typography>
+                <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
+                <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
+                <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
+                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny" ? <span id={styles.good}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poor}>POOR</span>: <span id={styles.moderate}>MODERATE</span>}</Typography>
+                <Typography id={styles.safetyAdvice} headline6>{safety == "Good" ? <span id={styles.good}><Icon class={styles.icon}>check_circle</Icon>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span> : safety == "Moderate" ? <div><span id={styles.moderate}><Icon class={styles.icon}>warning</Icon>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div> : <span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span>}</Typography>
+            </div>
         </div>
     );
 }

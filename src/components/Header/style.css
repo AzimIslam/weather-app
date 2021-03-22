@@ -1,10 +1,24 @@
+#search {
+    float: right;
+    color: white;
+    margin: 10px;
+}
+#location {
+    float: left;
+    color: white;
+    margin: 10px;
+}
 #header {
+    background-color: LightBlue;
+}
+
+#headerInfo {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
     padding: 2em;
-    background-color: LightBlue;
+    
 }
 
 #weatherText {

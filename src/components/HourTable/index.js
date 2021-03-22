@@ -5,7 +5,7 @@ import Icon from 'preact-material-components/Icon';
 
 const HourTable = ({data}) => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container} scrollable={true}>
             <div className={styles.row}>
                     <Typography class={styles.time} body1><strong>TIME</strong></Typography>
                     <Typography class={styles.weather} body1><strong>COND</strong></Typography>
