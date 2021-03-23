@@ -39,6 +39,7 @@
 }
 
 .icon {
+    display: inline-block;
     float: right;
     max-width: 30px;
     max-height: 30px;
