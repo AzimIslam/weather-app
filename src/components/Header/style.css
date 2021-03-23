@@ -1,3 +1,9 @@
+@media screen and (height: 414px) and (width: 736px) {
+    #rain, #cloudy, #snow, #sunny, #thunder {
+        display: none;
+    }
+}
+
 #search {
     float: right;
     color: white;

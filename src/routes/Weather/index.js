@@ -4,10 +4,9 @@ import 'preact-material-components/Typography/style.css';
 import {useState, useEffect} from 'preact/hooks';
 import Header from '../../components/Header';
 import WeeklyTable from '../../components/WeeklyTable';
-
+import styles from './style.css';
 import HourTable from '../../components/HourTable';
 import TabBarPage from '../../components/TabBarPage';
-import { route } from 'preact-router';
 
 
 

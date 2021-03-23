@@ -1,22 +1,49 @@
-html, body {
-	height: 736px;
-	width: 414px;
-	justify-content: center;
-	align-content: center;
-	padding: 0;
-	margin: 0 auto;
-	background: #FAFAFA;
-	font-family: 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: #444;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@media screen and (min-height: 736px) and (min-width: 414px) {
+	html, body {
+		max-width: 414px;
+		max-height: 736px;
+		justify-content: center;
+		align-content: center;
+		padding: 0;
+		margin: 0 auto;
+		background: #FAFAFA;
+		font-family: 'Helvetica Neue', arial, sans-serif;
+		font-weight: 400;
+		color: #444;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	#app {
+		height: 100%;
+	}
 }
+
+@media screen and (height: 414px) and (width: 736px) {
+	html, body {
+		min-height: 414px;
+		min-width: 736px;
+		justify-content: center;
+		align-content: center;
+		padding: 0;
+		margin: 0 auto;
+		background: #FAFAFA;
+		font-family: 'Helvetica Neue', arial, sans-serif;
+		font-weight: 400;
+		color: #444;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	
+	#app {
+		height: 100%;
+	}
+}
+*/
+
+
 
 * {
 	box-sizing: border-box;
 }
 
-#app {
-	height: 100%;
-}
+

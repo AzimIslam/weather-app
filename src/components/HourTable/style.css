@@ -58,3 +58,9 @@
 .good, .moderate, .poor {
     vertical-align: middle;
 }
+
+@media screen and (height: 414px) and (width: 736px) {
+    .row {
+        padding: 15px;
+    }
+}
