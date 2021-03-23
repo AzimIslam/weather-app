@@ -128,8 +128,8 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
             </div>
             <Typography id={styles.safetyAdvice} headline6> {
                 safety == "Good" ? <div><Icon class={styles.icon}>check_circle</Icon><span id={styles.good}>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span></div> : 
-                safety == "Moderate" ? <div ><Icon class={styles.icon}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div>: 
-                <div><Icon class={styles.icon}>error_outline</Icon><span id={styles.poor}>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span></div>
+                safety == "Moderate" ? <div><Icon class={styles.icon}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div>: 
+                <div><span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span></div>
             }
             </Typography>
         </div>
