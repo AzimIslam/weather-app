@@ -102,24 +102,56 @@
     display: inline;
 }
 
-#poor, #poorScore {
+#poorScore {
     color: red;
 }
 
-#moderate, #moderateScore {
+#poor {
+    color: red;
+    padding-left: 2em;
+}
+
+#moderateScore {
     color: coral;
 }
 
-#good, #goodScore {
+#moderate {
+    padding-left: 2em;
+    color: coral;
+}
+
+#goodScore {
+    color: green;
+}
+
+#good {
+    padding-left: 2em;
     color: green;
 }
 
 #poor, #moderate, #good {
     font-size: 150%;
 }
+
 #safetyAdvice {
     font-size: 7pt;
     width: 100%;
     font-weight: bolder;
     text-align: center;
+}
+
+.iconRed, .iconCoral, .iconGreen {
+    position: absolute
+}
+
+.iconRed {
+    color: red;
+}
+
+.iconCoral {
+    color: coral;
+}
+
+.iconGreen {
+    color: green
 }

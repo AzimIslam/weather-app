@@ -127,9 +127,9 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
                 <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
             <Typography id={styles.safetyAdvice} headline6> {
-                safety == "Good" ? <div><Icon class={styles.icon}>check_circle</Icon><span id={styles.good}>PERFECT CONDITIONS, MINIMAL CHANCE OF INJURY</span></div> : 
-                safety == "Moderate" ? <div><Icon class={styles.icon}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div>: 
-                <div><span id={styles.poor}><Icon class={styles.icon}>error_outline</Icon>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span></div>
+                safety == "Good" ? <div><Icon class={styles.iconGreen}>check_circle</Icon><span id={styles.good}>GOOD CONDITIONS, LOW CHANCE OF INJURY</span></div> : 
+                safety == "Moderate" ? <div><Icon class={styles.iconCoral}>warning</Icon><span id={styles.moderate}>TAKE CAUTION, MODERATE CHANCE OF INJURY</span></div>: 
+                <div><Icon class={styles.iconRed}>error_outline</Icon><span id={styles.poor}>NOT RECOMMENDED, HIGH CHANCE OF INCIDENT</span></div>
             }
             </Typography>
         </div>

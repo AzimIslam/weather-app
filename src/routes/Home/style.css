@@ -46,13 +46,16 @@ instead of inline */
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-
 /* CSS to add responsiveness to the home page */
+
 @media screen and (max-height: 414px) and (max-width: 736px){
 	#homeBody {
 		background-image: url('./assets/homebackground.jpg');
-		width: 100%;
-		max-height: 414px;
+		width: 736px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
 		background-size: cover;
 	}
 	
@@ -62,4 +65,4 @@ instead of inline */
 		flex-direction: column;
 		justify-content: center;
 	}
-}
+} 

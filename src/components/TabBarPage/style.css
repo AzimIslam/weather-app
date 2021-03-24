@@ -1,14 +1,24 @@
 .container {
     background-color: #0182F2;
-    overflow: auto;
+    width: 414px;
 }
 
 .container * {
     padding: 15px;
     display: inline-block;
     text-align: center;
-    width: 45%;
+    width: 50%;
     text-transform: uppercase;
     color: white;
+    border-right: 1px solid white;
 }
 
+
+@media screen and (max-height: 414px) and (max-width: 736px){
+    .container {
+        width: 736px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
