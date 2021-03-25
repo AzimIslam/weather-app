@@ -29,7 +29,7 @@ const redirectViaGPS = (pos) => {
 
 
 
-const Header = () => {
+const Home = () => {
 	const [postcode, setPostcode] = useState('');
 
 	const searchViaPostcode = () => {
@@ -53,4 +53,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default Home;

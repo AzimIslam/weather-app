@@ -70,12 +70,11 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
 
         });
 
-        fetch(`https://api.postcodes.io/outcodes?lon=${long}&lat=${lat}`)
+
+        fetch(`https://api.opencagedata.com/geocode/v1/json?key=3fa2e1ede77540178aeaca6cd287df1e&q=${lat}%2C+${long}&pretty=1&no_annotations=1`)
             .then(response => response.json())
-            .then(data => {
-                fetch(`https://api.postcodes.io/postcodes?q=${data["result"][0]["outcode"]}`)
-                    .then(response2 => response2.json())
-                    .then(data2 => setCity(data2["result"][0]["region"]))
+            .then(data2 => {
+                data2 = setCity(data2["results"]["0"]["components"]["city"])
             });
     }
 

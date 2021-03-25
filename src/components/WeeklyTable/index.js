@@ -3,11 +3,17 @@ import Typography from 'preact-material-components/Typography';
 import 'preact-material-components/Typography/style.css';
 import Icon from 'preact-material-components/Icon';
 import PopupBox from './../PopupBox/';
+import { route } from 'preact-router';
+import { Link } from 'preact-router/match';
 
 const WeeklyTable = ({data}) => {
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
     
-    return <div id={styles.container}>
+    const goToInfo = () => {
+        route('/info/1/1/1/1/1/')
+    }
+
+    return <div id={styles.container}> 
         {
             data.map((day, index) => {
                 return(
@@ -18,7 +24,7 @@ const WeeklyTable = ({data}) => {
                             }
                         </Typography>
                         <Typography class={styles.temp}body1>{String(day[0])}&deg;</Typography>
-                        <Icon className={styles.icon}>info</Icon> 
+                        <Icon onClick={goToInfo} className={styles.icon} native>info</Icon> 
                         <PopupBox/>
                     </div>
                 );
