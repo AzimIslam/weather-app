@@ -42,6 +42,7 @@ const Weather = ({long, lat}) => {
             // Formats weekly data
             let tempDays = []
             
+            console.log(data['daily'])
             for(let i = 1; i < 7; i++) {
                 let dayTemp = Math.round(data['daily'][i]["temp"]["max"]);
                 let dayWindSpeed = Math.round(data['daily'][i]['wind_speed'])

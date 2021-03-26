@@ -23,10 +23,9 @@ const HourTable = ({data}) => {
                         <Typography class={styles.temp} body1>{String(hour[3])}&deg;</Typography>
                         {
                             String(hour[1]) == "Sunny" || String(hour[1]) == "Clear" ? <Icon className={styles.good}>check_circle</Icon>:
-                            String(hour[1]) == "Rain" || String(hour[1]) == "Snow" || Number(hour[2]) >= 6 ? <Icon className={styles.poor}>error_outline</Icon>:
+                            String(hour[1]) == "Rain" || String(hour[1]) == "Snow" || Number(hour[2]) >= 25 ? <Icon className={styles.poor}>error_outline</Icon>:
                             <Icon className={styles.moderate}>warning</Icon>
                         }
-                        
                     </div>
                 )
                 })

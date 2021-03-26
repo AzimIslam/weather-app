@@ -92,7 +92,7 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
     else currentDate = days[dateObj.getDay()-1] + " " + dateObj.getDate() + " " + month + " " + dateObj.getFullYear();
 
     if (weather == "Sunny" || weather == "Clear") setSafety("Good");
-    else if (weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ) setSafety("Poor");
+    else if (weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 25 ) setSafety("Poor");
     else setSafety("Moderate");
 
     let style;
@@ -123,7 +123,7 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
                 <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
                 <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
                 <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
-                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 6 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
+                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 25 ? <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
             <Typography id={styles.safetyAdvice} headline6> {
                 safety == "Good" ? <div><Icon class={styles.iconGreen}>check_circle</Icon><span id={styles.good}>GOOD CONDITIONS, LOW CHANCE OF INJURY</span></div> : 
