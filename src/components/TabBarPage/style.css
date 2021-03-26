@@ -1,8 +1,12 @@
+/* Sets the background of the tab bar to a blue color and sets the width to 414px */
 .container {
     background-color: #0182F2;
     width: 414px;
 }
 
+/* Adds padding to the button and makes them inline so they aren't on top of each other.
+It also ensures that the text is all capitals and there is a line in the middle. Each text takes about 50% each
+so that there isn't any blank space */
 .container * {
     padding: 15px;
     display: inline-block;
@@ -14,6 +18,9 @@
 }
 
 
+/* When the orientation is landscape the width is changed to 736px
+and the position is absolute with bottom and left being zero, this ensures
+that there is not gap on the left or bottom of the Tab bar */
 @media screen and (max-height: 414px) and (max-width: 736px){
     .container {
         width: 736px;

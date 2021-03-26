@@ -1,5 +1,6 @@
 /* The container holding the buttons, textboxes and text are aligned
-to the center and are also responsive */
+to the center and are also responsive. We also padding so there will be
+spacing on the outside*/
 div.container {
 	display: flex;
 	align-items: center;
@@ -8,6 +9,8 @@ div.container {
 	padding: 5em;
 }
 
+/* We add this media query so it can resize the page to a mobile
+phone size */
 @media screen and (min-height: 736px) and (min-width: 414px){
 	/* Sets the background of this component to a roof */
 	#homeBody {
@@ -17,6 +20,7 @@ div.container {
 		height: 736px;
 	}
 }
+
 /* The 'WEATHER' text is made thin and black
 There is also spacing at the bottom of the word and
 spacing in between letters */
@@ -48,6 +52,9 @@ instead of inline */
 }
 /* CSS to add responsiveness to the home page */
 
+/* We add this media query so when the phone is flipped it will 
+change the dimensions and alter the padding of the container so it
+doesn't overflow */
 @media screen and (max-height: 414px) and (max-width: 736px){
 	#homeBody {
 		background-image: url('./assets/homebackground.jpg');
