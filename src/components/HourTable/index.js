@@ -1,10 +1,15 @@
+// Imports external CSS
 import styles from './style.css';
+
+// This imports Typography and Icon component from Material framework
 import Typography from 'preact-material-components/Typography';
 import 'preact-material-components/Typography/style.css';
 import Icon from 'preact-material-components/Icon';
 
+// The WeeklyTable component accepts data as a prop
 const HourTable = ({data}) => {
     return (
+        /* This displays the row headers: Time, Condition, Wind, Temperature and Safety */
         <div className={styles.container} scrollable={true}>
             <div className={styles.row}>
                     <Typography class={styles.time} body1><strong>TIME</strong></Typography>
@@ -14,6 +19,8 @@ const HourTable = ({data}) => {
                     <Typography class={styles.safety} body1><strong>SAFETY</strong></Typography>
             </div>
             {
+                // We use data.map() so we can iterate through the hourly data provided and lay them out in a specific format
+                // It also runs some code to determine the safety rating of the weather for each hour
                 data.map((hour, index) => {
                 return (
                     <div class={styles.row} key={index}>

@@ -1,4 +1,7 @@
-
+/* 
+This CSS is used to ensure that the screen has width of 414px and height of 736px - this ensures that we have a mobile layout as stated in assignment 1.
+Margin is also sent to 0 auto and the justify-content and align-content is set to center so the screen is in the center
+*/
 @media screen and (min-height: 736px) and (min-width: 414px) {
 	html, body {
 		max-width: 414px;
@@ -8,12 +11,14 @@
 		padding: 0;
 		margin: 0 auto;
 		background: #FAFAFA;
-		font-family: 'Helvetica Neue', arial, sans-serif;
+		font-family: 'Helvetica Neue414	', arial, sans-serif;
 		font-weight: 400;
 		color: #444;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 	}
+
+	/* We set the app's height to 100% so it makes full use of the screen */
 	#app {
 		height: 100%;
 	}

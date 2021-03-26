@@ -47,7 +47,7 @@ const Weather = ({long, lat}) => {
             var time1 = new Date(data['current']['sunset'] * 1000);
             var time2 = new Date(data['current']['sunrise'] * 1000);
 
-            // We then set the state of sunrise and set
+            // We then set the state of sunrise and sunset
             // We have to use the object methods: getHours() and getMinutes() so it can be formatted properly
             // We also use the methods padStart() so we can pad zeros
             setSunset(time1.getHours() + ":" + String(time1.getMinutes()).padStart(2, "0"));
