@@ -8,11 +8,11 @@
 It also ensures that the text is all capitals and there is a line in the middle. Each text takes about 50% each
 so that there isn't any blank space */
 .container * {
+    text-transform: uppercase;
     padding: 15px;
     display: inline-block;
     text-align: center;
     width: 50%;
-    text-transform: uppercase;
     color: white;
     border-right: 1px solid white;
 }

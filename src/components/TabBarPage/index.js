@@ -38,7 +38,7 @@ const TabBarPage = ({toggle}) => {
         <div className={styles.container}>
             {/* When the 'Weekly' text is clicked it calls the toggleWeekly() function */}
             <Typography onClick={toggleWeekly} style={weeklyCss} body1>Weekly</Typography>
-            {/* When the 'Weekly' text is clicked it calls the toggleHourly() function */}
+            {/* When the 'Hourly' text is clicked it calls the toggleHourly() function */}
             <Typography onClick={toggleHourly} style={hourlyCss} body1>Hourly</Typography>
         </div>
     );
