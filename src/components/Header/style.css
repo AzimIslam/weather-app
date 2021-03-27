@@ -153,11 +153,19 @@ set to the red and padding is added to the left to ensure that the icon is align
 set to the coral and padding is added to the left to ensure that the icon is aligned properly */
 #moderateScore {
     color: coral;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border: 2px solid;
+    border-radius: 5px;
 }
 
 #moderate {
-    padding-left: 2em;
     color: coral;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border-radius: 1em;
+    padding-left: 2em;
+    
 }
 
 /* If the weather safety rating for today is good the colour of the text is
@@ -200,6 +208,7 @@ Sets the font to bold and ensures that the text is aligned to the center */
 /* Sets any icon with a class of iconCoral to coral */ 
 .iconCoral {
     color: coral;
+    padding: 0.2em;
 }
 
 /* Sets any icon with a class of iconGreen to green */ 
