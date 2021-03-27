@@ -1,43 +1,59 @@
+/* EXTENSION: When the app is put in landscape mode it hides the header so
+we can see more of the weather data */ 
 @media screen and (height: 414px) and (width: 736px) {
     #rain, #cloudy, #snow, #sunny, #thunder {
         display: none;
     }
 }
 
+/* This puts the search icon on the top right and make it whites
+There is also a margin all around so it has spacing */
 #search {
     float: right;
     color: white;
     margin: 10px;
 }
+
+/* This puts the location icon on the top left and make it whites
+There is also a margin all around so it has spacing */
 #location {
     float: left;
     color: white;
     margin: 10px;
 }
+
+/* If the header has the rain id it sets the background to rain */
 #rain {
     background-image: url('./assets/rain.jpg');
     padding: 10px;
 }
 
+/* If the header has the cloudy id it sets the background to clouds */
 #cloudy {
     background-image: url('./assets/cloudy.jpg');
     padding: 10px;
 }
+
+/* If the header has the snow id it sets the background to snow */
 #snow {
     background-image: url('./assets/snow.jpg');
     padding: 10px;
 }
 
+/* If the header has the sunny id it sets the background to a sunny picture */
 #sunny {
     background-image: url('./assets/sunny.jpg');
     padding: 10px;
 }
 
+/* If the header has the thunder id it sets the background to thunderous clouds */
 #thunder {
     background-image: url('./assets/thunder.jpg');
     padding: 10px;
 }
 
+/* Ensures that all the content in the header is aligned to the center and that they
+are on top of each other*/
 #headerInfo {
 	display: flex;
 	align-items: center;
@@ -45,6 +61,8 @@
 	justify-content: center;
 }
 
+/* Sets the text 'Weather' to a light weight, makes the colour white, makes the font size
+30pt and brings it closer to the bottom */
 #weatherText {
     font-weight: lighter;
     color: white;
@@ -52,18 +70,23 @@
     margin-bottom: -14px;
 } 
 
+/* Makes the city text 20pt in size, makes the colour white and brings it closer to the bottom */
 #cityText {
     font-size: 20pt;
     color: white;
     margin-bottom: -5px;
 }
 
+/* Makes the colour of the date white, the font size 12pt and the opacity being 90%*/
 #date {
     color: white;
     font-size: 12pt;
     opacity: 90%;
 }
 
+/* Sets the temperature font to white and adds a bit of margin at the top of the text
+Sets the font to bold and the size to 48pt
+Adds padding to the bottom for extra space */
 #temp {
     color:white;
     margin-top: 0.25em;
@@ -72,6 +95,9 @@
     padding-bottom: 5px;
 }
 
+/* Ensures that the text of the weather condition is uppercase with a font size of 20pt and is bold 
+The colour is also set to white and is centered
+It also a dashed white line at the top of text */
 #weather {
     text-transform: uppercase;
     font-size: 20pt;
@@ -81,6 +107,8 @@
     border-top: 2px dashed white;
 }
 
+/* Ensures that the wind speed, sunset amd sunrise has a font size 
+of 12pt. It also makes the font colour white and all uppercase */
 #windSpeed, #sunset, #sunrise {
     font-size: 12pt;
     text-transform: uppercase;
@@ -88,10 +116,17 @@
     color:white;
 }
 
+/* Brings the sunset time text closer to the top */
 #sunset {
     margin-top: -8px
 }
 
+/* Set the text 'Safety Score: ' to white and makes it bold 
+It also adds margin at the top so there is a slight gap
+Makes the font size 14pt
+Aligns the text to the center
+Sets the width to 100% so there is no overflow and makes the property
+'inline' so when a new element is added it won't go on to a new line*/
 #safety {
     color: white;
     font-weight: bolder;
@@ -102,6 +137,9 @@
     display: inline;
 }
 
+
+/* If the weather safety rating for today is poor the colour of the text is
+set to the red and padding is added to the left to ensure that the icon is aligned properly */
 #poorScore {
     color: red;
 }
@@ -111,6 +149,8 @@
     padding-left: 2em;
 }
 
+/* If the weather safety rating for today is moderate the colour of the text is
+set to the coral and padding is added to the left to ensure that the icon is aligned properly */
 #moderateScore {
     color: coral;
 }
@@ -120,19 +160,26 @@
     color: coral;
 }
 
+/* If the weather safety rating for today is good the colour of the text is
+set to the green and padding is added to the left to ensure that the icon is aligned properly */
 #goodScore {
     color: green;
 }
+
 
 #good {
     padding-left: 2em;
     color: green;
 }
 
+/* Ensures that all safety advice text is 150% of the container due to responsiveness */
 #poor, #moderate, #good {
     font-size: 150%;
 }
 
+/* Sets the font of the safety advice to 7pt
+It also ensures that it takes up 100% of the width in the container
+Sets the font to bold and ensures that the text is aligned to the center */
 #safetyAdvice {
     font-size: 7pt;
     width: 100%;
@@ -140,18 +187,22 @@
     text-align: center;
 }
 
+/* Sets the positioning of all icons to absolute */
 .iconRed, .iconCoral, .iconGreen {
     position: absolute
 }
 
+/* Sets any icon with a class of iconRed to red */ 
 .iconRed {
     color: red;
 }
 
+/* Sets any icon with a class of iconCoral to coral */ 
 .iconCoral {
     color: coral;
 }
 
+/* Sets any icon with a class of iconGreen to green */ 
 .iconGreen {
     color: green
 }
