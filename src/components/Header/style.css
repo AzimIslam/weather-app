@@ -142,10 +142,17 @@ Sets the width to 100% so there is no overflow and makes the property
 set to the red and padding is added to the left to ensure that the icon is aligned properly */
 #poorScore {
     color: red;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border: 2px solid;
+    border-radius: 5px;
 }
 
 #poor {
     color: red;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border-radius: 1em;
     padding-left: 2em;
 }
 
@@ -172,12 +179,19 @@ set to the coral and padding is added to the left to ensure that the icon is ali
 set to the green and padding is added to the left to ensure that the icon is aligned properly */
 #goodScore {
     color: green;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border: 2px solid;
+    border-radius: 5px;
 }
 
 
 #good {
-    padding-left: 2em;
     color: green;
+    background-color: #6b6b6b;
+    padding: 0.3em;
+    border-radius: 1em;
+    padding-left: 2em;
 }
 
 /* Ensures that all safety advice text is 150% of the container due to responsiveness */
