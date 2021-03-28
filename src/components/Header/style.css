@@ -26,12 +26,14 @@ There is also a margin all around so it has spacing */
 #rain {
     background-image: url('./assets/rain.jpg');
     padding: 10px;
+    background-size: cover;
 }
 
 /* If the header has the cloudy id it sets the background to clouds */
 #cloudy {
     background-image: url('./assets/cloudy.jpg');
     padding: 10px;
+    background-size: cover;
 }
 
 /* If the header has the snow id it sets the background to snow */
@@ -44,12 +46,14 @@ There is also a margin all around so it has spacing */
 #sunny {
     background-image: url('./assets/sunny.jpg');
     padding: 10px;
+    background-size: cover;
 }
 
 /* If the header has the thunder id it sets the background to thunderous clouds */
 #thunder {
     background-image: url('./assets/thunder.jpg');
     padding: 10px;
+    background-size: cover;
 }
 
 /* Ensures that all the content in the header is aligned to the center and that they
@@ -143,9 +147,9 @@ set to the red and padding is added to the left to ensure that the icon is align
 #poorScore {
     color: red;
     background-color: #6b6b6b;
-    padding: 0.3em;
     border: 2px solid;
     border-radius: 5px;
+    display: block;
 }
 
 #poor {
@@ -161,9 +165,9 @@ set to the coral and padding is added to the left to ensure that the icon is ali
 #moderateScore {
     color: coral;
     background-color: #6b6b6b;
-    padding: 0.3em;
     border: 2px solid;
     border-radius: 5px;
+    display: block;
 }
 
 #moderate {
@@ -172,7 +176,7 @@ set to the coral and padding is added to the left to ensure that the icon is ali
     padding: 0.3em;
     border-radius: 1em;
     padding-left: 2em;
-    
+    width: 50%;
 }
 
 /* If the weather safety rating for today is good the colour of the text is
@@ -180,9 +184,11 @@ set to the green and padding is added to the left to ensure that the icon is ali
 #goodScore {
     color: green;
     background-color: #6b6b6b;
-    padding: 0.3em;
     border: 2px solid;
     border-radius: 5px;
+    display: block;
+    width: 50%;
+    margin-left: 65px;
 }
 
 

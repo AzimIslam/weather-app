@@ -20,22 +20,24 @@ import { useState } from 'preact/hooks';
 const searchBtnCss = { marginTop: "8px" };
 
 
-// This method is responsible for requesting the GPS location to the user
-const requestGPS = () => {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(redirectViaGPS);
-	}
-}
 
-// Extracts the coordinates from the geolocation API and redirects to /Weather with the longitude and latitude
-// as parameters
-const redirectViaGPS = (pos) => {
-	route(`/weather/${pos.coords.longitude}/${pos.coords.latitude}`);
-}
 
 const Home = () => {
 	// We create this state, so it keeps tracks of what the user types into the textbox
 	const [postcode, setPostcode] = useState('');
+
+	// This method is responsible for requesting the GPS location to the user
+	const requestGPS = () => {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(redirectViaGPS);
+		}
+	}
+
+	// Extracts the coordinates from the geolocation API and redirects to /Weather with the longitude and latitude
+	// as parameters
+	const redirectViaGPS = (pos) => {
+		route(`/weather/${pos.coords.longitude}/${pos.coords.latitude}`);
+	}
 
 	// This functions does an API call and retrieves the postcode latitude and longitude and passes that
 	// as a parameter to /weather route
