@@ -149,7 +149,7 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
 
     // This algorithm is using to determine the safety rating by using today's weather data
     if (weather == "Sunny" || weather == "Clear") setSafety("Good");
-    else if (weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 25 ) setSafety("Poor");
+    else if (weather == "Rain" || weather == "Snow" || weather == "Thunder" || Number(windSpeed) >= 25 ) setSafety("Poor");
     else setSafety("Moderate");
 
     // This variable is initalised so we can set the background of the header
