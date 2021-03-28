@@ -33,7 +33,11 @@ There is also a margin all around so it has spacing */
 #cloudy {
     background-image: url('./assets/cloudy.jpg');
     padding: 10px;
-    background-size: cover;
+}
+
+#clear {
+    background-image: url('./assets/clear.jpg');
+    padding: 10px;
 }
 
 /* If the header has the snow id it sets the background to snow */
