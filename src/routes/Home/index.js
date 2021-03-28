@@ -19,9 +19,6 @@ import { useState } from 'preact/hooks';
 // In-line CSS - adds space at the top of the button 
 const searchBtnCss = { marginTop: "8px" };
 
-
-
-
 const Home = () => {
 	// We create this state, so it keeps tracks of what the user types into the textbox
 	const [postcode, setPostcode] = useState('');

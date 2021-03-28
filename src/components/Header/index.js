@@ -106,11 +106,25 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
         // We make an API call to opencagedata by passing our latitude and longitude
         // We do this so we can get the city name via the latitude and longitude
         // If the API call is successful we set the city state
-        fetch(`https://api.opencagedata.com/geocode/v1/json?key=3fa2e1ede77540178aeaca6cd287df1e&q=${lat}%2C+${long}&pretty=1&no_annotations=1`)
-            .then(response => response.json())
-            .then(data2 => {
+       fetch(`https://api.opencagedata.com/geocode/v1/json?key=3fa2e1ede77540178aeaca6cd287df1e&q=${lat}%2C+${long}&pretty=1&no_annotations=1`)
+        .then(response => response.json())
+        .then(data2 => {
+            if (data2["results"]["0"]["components"]["suburb"] != null){
+                data2 = setCity(data2["results"]["0"]["components"]["suburb"])
+            }
+            else if (data2["results"]["0"]["components"]["city"] != null) {
                 data2 = setCity(data2["results"]["0"]["components"]["city"])
-            });
+            }
+            else if (data2["results"]["0"]["components"]["town"] != null) {
+                data2 = setCity(data2["results"]["0"]["components"]["town"])
+            }
+            else if (data2["results"]["0"]["components"]["village"] != null) {
+                data2 = setCity(data2["results"]["0"]["components"]["village"])
+            }
+            else {
+                data2 = setCity(data2["results"]["0"]["components"]["postcode"])
+            }
+        });
     }
 
     // This functions does an API call and retrieves the postcode latitude and longitude and passes that
