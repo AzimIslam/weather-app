@@ -26,7 +26,7 @@ There is also a margin all around so it has spacing */
 #rain {
     background-image: url('./assets/rain.jpg');
     padding: 10px;
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 /* If the header has the cloudy id it sets the background to clouds */
@@ -149,16 +149,16 @@ Sets the width to 100% so there is no overflow and makes the property
 /* If the weather safety rating for today is poor the colour of the text is
 set to the red and padding is added to the left to ensure that the icon is aligned properly */
 #poorScore {
-    color: red;
-    background-color: #6b6b6b;
+    color: rgba(255, 0, 0, 0.884);
+    background-color: #cfcfcfdc;
     border: 2px solid;
     border-radius: 5px;
     display: block;
 }
 
 #poor {
-    color: red;
-    background-color: #6b6b6b;
+    color:rgba(255, 0, 0, 0.849);
+    background-color: #cfcfcfdc;
     padding: 0.3em;
     border-radius: 1em;
     padding-left: 2em;
@@ -226,7 +226,9 @@ Sets the font to bold and ensures that the text is aligned to the center */
 
 /* Sets any icon with a class of iconRed to red */ 
 .iconRed {
-    color: red;
+    color: rgba(255, 0, 0, 0.705);
+    padding-top: 0.2em;
+    padding-left: 0.1em;
 }
 
 /* Sets any icon with a class of iconCoral to coral */ 
