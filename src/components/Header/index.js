@@ -197,7 +197,7 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
                 <Typography headline4 id={styles.windSpeed}>Wind Speed: {windSpeed} MPH</Typography>
                 <Typography id={styles.sunset}>Sunset time: {sunset}</Typography>
                 <Typography id={styles.sunrise}>Sunrise time: {sunrise}</Typography>
-                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || Number(windSpeed) >= 25 ?  <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
+                <Typography id={styles.safety} headline6>SAFETY SCORE: { weather == "Sunny"|| weather == "Clear" ? <span id={styles.goodScore}>GOOD</span>: weather == "Rain" || weather == "Snow" || weather == "Thunder" || Number(windSpeed) >= 25 ?  <span id={styles.poorScore}>POOR</span>: <span id={styles.moderateScore}>MODERATE</span>}</Typography>
             </div>
             <Typography id={styles.safetyAdvice} headline6> {
                 // This if statement determines the safety score and shows the relevant icon and advice that corresponds to it
