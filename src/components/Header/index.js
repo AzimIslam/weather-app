@@ -159,10 +159,11 @@ const header = ({setSunrise, setSunset, setWeather, setCity, setTemp, setWindSpe
     // These if statements check the weather and set the specific style ID
     // This is done since each style ID in the CSS file changes the background image
     if (weather == "Rain" || weather == "Drizzle") style = styles.rain;
-    else if (weather == "Clear" || weather == "Clouds") style = styles.cloudy;
+    else if (weather == "Clouds") style = styles.cloudy;
     else if (weather == "Snow") style = styles.snow;
     else if (weather == "Sunny") style = styles.sunny;
     else if (weather == "Thunder") style = styles.thunder;
+    else if (weather == "Clear") style = styles.clear
 
     return (
         // Creates a div and assigns its the ID which is determined by the

@@ -187,7 +187,7 @@ set to the coral and padding is added to the left to ensure that the icon is ali
 set to the green and padding is added to the left to ensure that the icon is aligned properly */
 #goodScore {
     color: green;
-    background-color: #6b6b6b;
+    background-color: white;
     border: 2px solid;
     border-radius: 5px;
     display: block;
@@ -198,7 +198,7 @@ set to the green and padding is added to the left to ensure that the icon is ali
 
 #good {
     color: green;
-    background-color: #6b6b6b;
+    background-color:white;
     padding: 0.3em;
     border-radius: 1em;
     padding-left: 2em;
@@ -239,5 +239,6 @@ Sets the font to bold and ensures that the text is aligned to the center */
 
 /* Sets any icon with a class of iconGreen to green */ 
 .iconGreen {
-    color: green
+    color: green;
+    padding-top: 0.15em;
 }
